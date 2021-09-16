@@ -19,6 +19,53 @@ And now you have 3 queues each with pre-in-post order traversal path.
 
 Also make a note that if the binary tree is a binary search tree, then the in-order traversal will give a sorted array. We can use this property to check if the binary tree is a binary search tree or not.
 
+
+## C Code
+Let's see some C code for this traversal algorithm
+
+Tree Structure
+```C
+struct TreeNode {
+	char data;
+	struct TreeNode *left, *right;
+};
+
+typedef struct TreeNode TreeNode;
+```
+
+Traversal Algorithms
+```C
+void inOrderTraversal(TreeNode *nodePointer){
+
+	if (nodePointer != NULL) {
+		inOrderTraversal(nodePointer->left);
+		printf("%c", nodePointer->data);
+		inOrderTraversal(nodePointer->right);
+	}
+}
+
+void preOrderTraversal(TreeNode *nodePointer){
+
+	if (nodePointer != NULL) {
+		printf("%c", nodePointer->data);
+		preOrderTraversal(nodePointer->left);
+		preOrderTraversal(nodePointer->right);
+	}
+}
+
+void postOrderTraversal(TreeNode *nodePointer){
+
+	if (nodePointer != NULL) {
+		postOrderTraversal(nodePointer->left);
+		postOrderTraversal(nodePointer->right);
+
+		printf("%c", nodePointer->data);
+	}
+}
+```
+
+
+
 ### More on this
 To see the proper algorithm on this visit [here](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
 
