@@ -64,9 +64,7 @@ void postOrderTraversal(TreeNode *nodePointer){
 }
 ```
 
-
-
 ### More on this
 To see the proper algorithm on this visit [here](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
 
-Get all the updates directly into your inbox by putting your email below
+Get all the updates directly into your inbox by subscribing to the blog.
